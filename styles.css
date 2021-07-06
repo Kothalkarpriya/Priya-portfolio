@@ -2,6 +2,7 @@
 
 :root{
     --primary-color: #C084FC;
+    --dark-gray:#9CA3AF;
 }
 body{
     margin: 10px;
@@ -61,7 +62,7 @@ hr{
     background-color: var(--primary-color);
     color:white;
     padding: 1rem;
-    border-bottom-left-radius: 1rem;
+    border-bottom-left-radius: 1rem ;
 }
 
 .navigation .nav-brand{
@@ -79,7 +80,24 @@ hr{
     font-weight:bold;
 }
 
+/* header */
+.hero{
+    padding:2rem;
+}
 
+.hero .hero-img{
+    max-width:350px;
+    display:block;
+    margin:auto;
+}
 
+.hero .hero-heading{
+    padding-top: 1rem;
+    color:var(--dark-gray);
+}
 
+.hero .hero-heading .header-inverted{
+
+    color:var(--primary-color);
+}
 
