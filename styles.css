@@ -3,7 +3,7 @@
 :root {
     --primary-color: #C084FC;
     --dark-gray: #9CA3AF;
-    --off-white:#E4E4E7;
+    --off-white: #E4E4E7;
 }
 
 body {
@@ -108,15 +108,35 @@ hr {
 }
 
 /* section class */
-.section{
-    padding:2rem;
+.section {
+    padding: 2rem;
 }
+
 .section h1 {
 
     text-align: center;
-    
+
 }
 
-.ow{
+.ow {
     background-color: var(--off-white);
 }
+
+/* footer class */
+
+.footer{
+    background-color: var(--primary-color);
+    padding: 2rem 1rem;
+    text-align: center;
+    color: white;
+    border-top-right-radius: 1;
+}
+
+.footer .link{
+    color:white;
+}
+
+.footer .ul{
+    padding-inline-start: 0px ;
+}
+
