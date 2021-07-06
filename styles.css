@@ -1,13 +1,16 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 :root{
-    --primary-color: rgb(224, 101, 224);
+    --primary-color: #C084FC;
 }
 body{
     margin: 10px;
 
     font-family: 'Noto Sans JP', 
     sans-serif;
+}
+hr{
+    margin:2rem 0rem;
 }
 
 /** container  **/
