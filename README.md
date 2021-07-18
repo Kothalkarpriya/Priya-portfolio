@@ -1,4 +1,4 @@
-#  Priya-Kothalkar
+#  Priya-Kothalkar's Portfolio
 <hr>
 
 Welcome to my Portfolio Website.
