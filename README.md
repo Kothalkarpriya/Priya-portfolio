@@ -15,6 +15,7 @@ I am good at
 7. SQL
 8. Git
 9. WEB HOSTING
+
  and learning Flutter, React and Django.
  
  If you have any suggestions for me then please write me 
