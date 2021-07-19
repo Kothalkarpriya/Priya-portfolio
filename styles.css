@@ -4,6 +4,7 @@
     --primary-color: #67E8F9;
     --dark-gray: #9CA3AF;
     --off-white: #E4E4E7;
+    --light-blue:#F0FDFA;
 }
 
 body {
@@ -140,6 +141,12 @@ hr {
 
 .ow {
     background-color: var(--off-white);
+}
+
+/* blog css */
+.blog{
+    background-color: var(--light-blue);
+    margin: 1rem;
 }
 
 /* footer class */
