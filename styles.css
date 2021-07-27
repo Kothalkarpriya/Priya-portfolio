@@ -3,7 +3,7 @@
 :root {
     --primary-color: #67E8F9;
     --dark-gray: #9CA3AF;
-    --off-white: #E4E4E7;
+    --off-white: #F4F4F5;
     --light-blue:#F0FDFA;
 }
 
@@ -30,7 +30,7 @@ hr {
 }
 
 .container-center {
-    max-width: 600px;
+    max-width: 700px;
     margin: auto;
 }
 
@@ -51,7 +51,7 @@ hr {
     color: white;
     display: block;
     max-width: 140px;
-    margin: 1rem 1rem 1rem 0rem;
+    margin: 1rem 1rem 1rem 0rem;    
     
 }
 
@@ -73,6 +73,11 @@ hr {
 .list-item-inline {
     display: inline;
     padding: 0rem 0.5rem;
+}
+
+/* flexbox */
+.flex{
+    display: flex;
 }
 
 /* navigation bar */
