@@ -1,12 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Cash Register Making</title>
+    <title>Making Of Cash Register || Priya Kothalkar</title>
+    <link href="/styles.css" rel="stylesheet" />
 </head>
+
 <body>
-    <h1>Cash Register Making</h1>
+    <nav class="navigation container">
+        <div class="nav-brand">I am a Developer</div>
+        <ul class="list-non-bullet nav-pills">
+            <li class="list-item-inline">
+                <a class="link link-active" href="/index.html">Home</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/lib/projects.html">Projects</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/lib/blogs.html">Blogs</a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="/lib/about_me.html">About me</a>
+
+            </li>
+        </ul>
+    </nav>
+
+    <article>
+        <h1>Cash Register Making</h1>
+        <hr>
+        <div style="text-align: justify; margin:1rem; padding: 1rem;">
+        <p> Cash Register Manager is an application made up of <strong>Vanilla JS</strong>, <strong>HTML5</strong>, and <strong>CSS3</strong> </p>
+        <p> In this application we have to give two inputs as:    Bill Amount and Cash Amount.
+        
+        Let's suppose We entered in the shop and we bought things we needed and the bill came in our hand, but we are bad at calculation. So we will be using cash Register for the same. Here comes our Cash Register Manager as a Superhero Problem Solver.
+       
+        Let's Make Cash Register Manager ! We will Divide it into two steps: 1. HTML and CSS , 2. JavaScript(VanillaJS)
+        </p>
+        <h3>1. HTML and CSS</h3>
+        <p>
+            Let's talk about what we need as a Front-End or as a Face to the <em>Cash Register Manager</em> Through which user can interact.
+        </p>
+        <img style=" max-width: 600px;
+        display: block;
+        margin: auto;" src="/images/frontpage.png"/>
+        <p>
+            <em>Steps to follow:</em>
+            <ol>
+                <li>Heading as <strong>Cash Register Manager</strong></li>
+                <li>Add paragraph as per Your Mind says about our Website.</li>
+                <li>Add Label(for Labelling the input) and input(To take Bill input Amount) and same for <em>Cash amount</em>.</li>
+                <li>Adding Button to activate click event in JavaScript(We will talk about it in JavaScript Section).</li>
+                <li>Add Table with caption as "Return Change", tr, td with th as "No. Of Notes" and "Note".</li>
+                <li>Footer with Social media Links or copywrite or licences if any.</li>
+                CSS Added using different properties, you can see the complete code via <a href="https://github.com/Kothalkarpriya/cash_register"> Github </a> link.
+            </ol>
+        </p>
+        <h3>2. JavaScript</h3>
+        <ol>
+            <li><p>
+                We have added id's to the input and button tag as:
+                <em>"input id="bill-amount" "</em> likewise we gave same id to the respective label too for accessibility. 
+                We would use this id in the javascript as follows.
+            </p></li>
+            <li><p>
+                Creating variable in javascript to access the id Used in HTML. <em>" const billAmount = document.queryselector("#bill-amount"); "</em>. Likewise we will create varibles for other input and button
+            </p></li>
+            <small style="color:blue;">Note: If you get stuck, don't forget to give a look at <a href="https://github.com/Kothalkarpriya/cash_register">Github</a> for complete code for reference</small>
+            <li><p>
+                We Have taken different notes in our array as 
+                <em>" const availableNote= [2000,500,100,50,20,10,5,1] "</em> It is an array and we can access an array as <em> " array[0] or array[index_position] "</em>
+                It'll be used in further steps
+            </p></li>
+            <li>
+                <p>Creating a function using button(onClick event). <em>" button.addEventListener('on_click', function functionName(_parameter_){function_body})"</em></p>
+
+            </li>
+            <li>
+                <p>
+                    In between the function we are using the logic as follows:
+                    First checks whether the bill value is greater than zero and then checks for bill value is less than or equals to the cash value then only the function will get executed otherwise it will return "Invalid Function".
+                </p>
+            </li>
+            <li>
+                <p>If function gets executed then we call another function to calculate the minimum number of notes required to represent the amount which gets after substracting bill value from cash value.
+                    Logic: 
+                    <ul>
+                        <li>output = cash_value - bill_value</li>
+                        <li>Notes = Math.trunc(output/2000)</li>
+                        <li>output = output % 2000 </li>
+                        <li>Notes = Math.trunc(output/Notes[index_value]</li>
+                        <li>output = output % Notes[index_value]</li>
+                    </ul>
+                </p>
+            </li>
+            <li>
+                <p>Notes values will be output to the table column output which will be shown in front of the respective note used. It's an class used in javascript as <em>
+                    "const Notes = document.querySelectorAll(".notes");"
+                </em> It created an array of notes and used here in the place of 2000 and we use for loop to traverse over every array element till the mod value comes zero</p>
+            </li>
+        </ol>
+        <p>This is how we have created <strong> Cash Register Manager using Vanilla Js</strong>. 
+        If You get any queries then you can always find complete code on <a href="https://github.com/Kothalkarpriya/cash_register">Github</a></p>
+        <h6>Thank you for visiting my Blog. You connect with me on below Social Media Handles</h6>
+        <h4>I am Priya Kothalkar, WebDeveloper</h4>
+    </div>
+
+    </article>
+
+    <footer class="footer container">
+        <div class="footer-header">
+            You can connect with me on social media
+        </div>
+        <ul class="social-links list-non-bullet">
+            <li class="list-item-inline">
+                <a class="link" href="https://github.com/Kothalkarpriya"> <strong>Github</strong> </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://linkedin.com/in/priyakothalkar"> <strong>Linkedin </strong></a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link" href="https://twitter.com/Priyakothalkar">
+                    <strong>Twitter</strong> </a>
+            </li>
+            <li class="list-item-inline">
+                <a class="link"
+                    href="https://www.youtube.com/channel/UCFCcS_XornYgSVDiR0alThA"><strong>YouTube</strong></a>
+            </li>
+        </ul>
+
+    </footer>
 </body>
+
 </html>

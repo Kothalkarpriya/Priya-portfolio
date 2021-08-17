@@ -28,7 +28,9 @@ hr {
     padding: 0rem 1rem;
 
 }
-
+article{
+    text-align: center;
+}
 .container-center {
     max-width: 700px;
     margin: auto;
