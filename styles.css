@@ -192,3 +192,11 @@ article{
     background-color: var(--off-white);
     display: block;
 }
+
+td{
+    padding: 0 1rem;
+    text-align: center;
+}
+table,tr,td{
+    border: 1px solid black;
+}
