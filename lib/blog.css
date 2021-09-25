@@ -1,0 +1,26 @@
+.pagewrap{
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+main{
+    flex-grow: 1;
+}
+article{
+    padding: 0 2rem;
+}
+p{
+    font-size: large;
+}
+a{text-decoration: none;}
+.imp-point{
+    /* background-color: ; */
+    border: 4px solid #caf0f8;
+    border-radius: 0.5rem;
+}
+.code{
+    background-color:#F4F4F5;
+    border: 2px solid #caf0f8;
+    padding: 2rem;
+    max-width: 60%;
+}
