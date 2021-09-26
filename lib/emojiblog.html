@@ -33,7 +33,8 @@
             <article>
                 <h1 style="text-align:center;">Making of Emoji Cyclopedia : </h1>
 
-                <p style="text-align:center;">You can Find the applocation on: <a href="https://cfkyl.csb.app/">Emoji Cyclopedia</a> </p>
+                <p style="text-align:center;">You can Find the applocation on: <a href="https://cfkyl.csb.app/">Emoji
+                        Cyclopedia</a> </p>
                 <hr>
 
                 <div>
@@ -50,21 +51,24 @@
                         the methods, components
                         declared earlier. To display on the screen we have to right things in return().</p>
                     <p>
-                        As a display, we need to take input using input tag, and to represent the output we are creating the dictionary and function.
+                        As a display, we need to take input using input tag, and to represent the output we are creating
+                        the dictionary and function.
                     </p>
                     <p class="imp-point">
-                        <strong >Dictionary: </strong> It is a key and value pair represented by curly braces({}). Can be accessed using a for loop with a key to
+                        <strong>Dictionary: </strong> It is a key and value pair represented by curly braces({}). Can be
+                        accessed using a for loop with a key to
                         finding the value. Here we are storing our emoji and its value using the dictionary itself.
                     </p>
                     <div class="code">
-                       <strong>Example: </strong>
-                       <br>
+                        <strong>Example: </strong>
+                        <br>
                         var emojiDictionary = {
                         'emoji' : 'meaning of the emoji'
                         };
                     </div>
                     <p class="imp-point">
-                        <strong>Object.keys(): </strong> It is a method that returns an array of the provided object's elements which are strings corresponding to
+                        <strong>Object.keys(): </strong> It is a method that returns an array of the provided object's
+                        elements which are strings corresponding to
                         the enumerable properties found directly upon the object. Ordering remains the same as inserted.
                     </p>
                     <p>
@@ -80,6 +84,74 @@
                             <li>2: "😴"</li>
                             <li>3: "😏"</li>
                             <li>4: "😌"</li>
+                        </ul>
+                    </div>
+                    <p class="imp-point">
+                       <strong>Hook in react:</strong>  A hook is a special function that lets you "hook into" react features. useState
+                        is a hook that lets you
+                        add React state function components.
+                    </p>
+                    <p>Now we need to import the useState hook from React to use react capabilities or functions.</p>
+                    <div class="code">
+                        var [state, setState] = useState("");<br>
+                        where,
+                        <ul>
+                            <li>state is a variable,</li>
+                            <li>useState is used to increment/ update the value of variable state.</li>
+                        </ul>
+                    </div>
+                    <p>
+                        Here we need to create functions as clickHandler and emojiInputHandler.
+                    </p>
+                    <p>
+                        function clickHandler needs an emoji as a parameter. Here, we are finding the meaning of the
+                        emoji and passing it to
+                        setState.
+                    </p>
+                    <p>
+                        Function emojiInputHandler takes the event as a parameter and as per the event meaning is searched for the event(i.e,
+                        Event is here inserted emoji) and comparing if there is emoji is present in the dictionary if not it will result as
+                        "Undefined". If it is their then meaning is the output.
+                    </p>
+                    <p>
+                        We have created the constraint and now we need to access them properly.
+                        To take the event as input we need to add an event handler in the input tag.
+                        as,
+                    </p>
+                    <div class="code">
+                        onChange = {emojiInputHandler}
+                    </div>
+                    <p>
+                        Here We have created our Emoji cyclopedia. We can show our stored emoji's and as the user clicks on them it should show
+                        the meaning.
+                    </p>
+                    <p class="imp-point">
+                        <strong>map(): </strong> The map method creates a new array with the called object.
+                    </p>
+                    <p>
+                        As we know we have used the Object.keys method to create an array using a dictionary and this array is used with the map
+                        function here.
+                    </p>
+                    <div class="code">
+                        emojiWeKnow.map(function(emoji){<br>
+                        return(<br>
+                         onClick={()=>clickHandler(emoji)} <br>key={emoji}><br>{emoji}<br>
+                        );
+                        })
+                    </div>
+                    <p>
+                        Emoji Cyclopedia is completed!
+                    </p>
+                    <div class="imp-points code">
+                        <p>We learned about:</p>
+                        <ul>
+                            <li>Dictionary,</li>
+                            <li>Object.keys()</li>
+                            <li>Hooks in react,</li>
+                            <li>Event,</li>
+                            <li>OnChange,</li>
+                            <li>onClick,</li>
+                            <li>map() and Keys</li>
                         </ul>
                     </div>
                 </div>
