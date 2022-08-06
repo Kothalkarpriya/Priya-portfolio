@@ -1,38 +1,45 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP&display=swap');
 
 :root {
-    --primary-color: #67E8F9;
+    --primary-color: #4E1483;
     --dark-gray: #9CA3AF;
-    --off-white: #F4F4F5;
-    --light-blue:#F0FDFA;
+    --off-white: #DEE2E6;
+    --light-blue: #F8F9FA;
+    --white: white;
 }
 
 body {
     margin: 0px;
-
+    background-color: var(--light-blue);
     font-family: 'Noto Sans JP',
         sans-serif;
+}
+
+.section .container h1 span,
+.short-line {
+    color: var(--primary-color);
+    text-align: center;
 }
 
 hr {
     margin: 2rem 0rem;
 }
-.margin-md{
+
+.margin-md {
     margin: 2rem 0rem;
 }
 
 /** container  **/
 .container {
-    /* padding-left: 1rem;
-    padding-right: 1rem; */
     padding: 0rem 1rem;
 
 }
-article{
-    /* text-align: center; */
-    max-width: 1000px;
+
+article {
+    max-width: 800px;
     margin: auto;
 }
+
 .container-center {
     max-width: 700px;
     margin: auto;
@@ -43,20 +50,17 @@ article{
     box-sizing: border-box;
     text-decoration: none;
     padding: 0.5rem 1rem;
-
-    /* margin-top :1rem;
-    margin-bottom: 1rem; */
 }
 
 .link-primary {
     background-color:
         var(--primary-color);
     border-radius: 0.5rem;
-    color: white;
+    color: var(--white);
     display: block;
     max-width: 140px;
-    margin: 1rem 1rem 1rem 0rem;    
-    
+    margin: 1rem 1rem 1rem 0rem;
+
 }
 
 .link-secondary {
@@ -76,20 +80,18 @@ article{
 
 .list-item-inline {
     display: inline;
-    /* padding: 0rem 0.5rem; */
 }
 
 /* flexbox */
-.flex{
+.flex {
     display: flex;
     align-items: center;
 }
 
 /* navigation bar */
-
 .navigation {
     background-color: var(--primary-color);
-    color: white;
+    color: var(--white);
     padding: 1rem;
     border-bottom-left-radius: 1rem;
 }
@@ -99,7 +101,7 @@ article{
     font-size: 1.1rem;
 }
 
-.navigation a{
+.navigation a {
     text-decoration: none;
     color: inherit;
 }
@@ -109,7 +111,7 @@ article{
 }
 
 .navigation .link {
-    color: white;
+    color: var(--white);
 }
 
 .navigation .link-active {
@@ -119,7 +121,7 @@ article{
 /* header */
 .hero {
     padding: 1rem;
-    padding-top: 1rem ;
+    padding-top: 1rem;
 }
 
 .hero .hero-img {
@@ -135,14 +137,12 @@ article{
 }
 
 .hero .hero-heading .header-inverted {
-
     color: var(--primary-color);
 }
 
 /* section class */
 .section {
     padding: 2rem;
-   
 }
 
 .section h1 {
@@ -154,49 +154,50 @@ article{
 }
 
 /* blog css */
-.blog{
+.blog {
     background-color: var(--light-blue);
     margin: 2rem;
 }
 
 /* footer class */
 
-.footer{
+.footer {
     background-color: var(--primary-color);
     padding: 2rem 1rem;
     text-align: center;
-    color: white;
+    color: var(--white);
     border-top-right-radius: 1;
 }
 
-.footer .footer-header{
-    font-weight:bold;
-    font-size:large;
-}   
-.footer .link{
-    color:white;
+.footer .footer-header {
+    font-weight: bold;
+    font-size: large;
 }
 
-.footer .ul{
-    padding-inline-start: 0px ;
+.footer .link {
+    color: var(--white);
 }
-/* 
-.showcase-list{
-    /* padding:2rem; */
 
-.showcase-blog{
+.footer .ul {
+    padding-inline-start: 0px;
+}
+
+.showcase-blog {
     padding-bottom: 6rem;
 }
 
-#container{
+#container {
     background-color: var(--off-white);
     display: block;
 }
 
-td{
+td {
     padding: 0 1rem;
     text-align: center;
 }
-table,tr,td{
+
+table,
+tr,
+td {
     border: 1px solid black;
 }
