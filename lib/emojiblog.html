@@ -1,187 +1,237 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Emoji Cyclopedia</title>
     <link href="/styles.css" rel="stylesheet" />
     <link href="blog.css" rel="stylesheet" />
-</head>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Lugrasimo&family=Roboto+Slab&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://kit.fontawesome.com/1f5a04136d.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
 
-<body>
+  <body>
     <div class="pagewrap">
-        <nav class="navigation container">
-            <div class="nav-brand">I am a Developer</div>
-            <ul class="list-non-bullet nav-pills">
-                <li class="list-item-inline">
-                    <a class="link link-active" href="/index.html">Home</a>
-                </li>
-                <li class="list-item-inline">
-                    <a class="link" href="/lib/projects.html">Projects</a>
-                </li>
-                <li class="list-item-inline">
-                    <a class="link" href="/lib/blogs.html">Blogs</a>
-                </li>
-                <li class="list-item-inline">
-                    <a class="link" href="/lib/about_me.html">About me</a>
-                </li>
-            </ul>
-        </nav>
-        <main>
-            <article>
-                <h1 style="text-align:center;">Making of Emoji Cyclopedia : </h1>
+      <nav class="navigation container">
+        <div class="nav-brand">I am a Developer</div>
+        <ul class="list-non-bullet nav-pills">
+          <li class="list-item-inline">
+            <a class="link link-active" href="/index.html">Home</a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link" href="/lib/projects.html">Projects</a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link" href="/lib/blogs.html">Blogs</a>
+          </li>
+          <li class="list-item-inline">
+            <a class="link" href="/lib/about_me.html">About me</a>
+          </li>
+        </ul>
+      </nav>
+      <main>
+        <article>
+          <h1 style="text-align: center">Making of Emoji Cyclopedia : </h1>
 
-                <p style="text-align:center;">You can Find the applocation on: <a href="https://cfkyl.csb.app/">Emoji
-                        Cyclopedia</a> </p>
-                <hr>
+          <p style="text-align: center"
+            >You can Find the applocation on:
+            <a href="https://cfkyl.csb.app/">Emoji Cyclopedia</a>
+          </p>
+          <hr />
 
-                <div>
-                    <p>
-                        Emoji Cyclopedia is an encyclopedia to take out the meaning of an emoji. We have to insert emoji
-                        in the input column or
-                        we can click on the emoji given from the database. We can add as much as emoji's in our database
-                        using the dictionary
-                        used.
-                        It is made up of using <strong><a href="https://reactjs.org/">ReactJs</a></strong>
-                    </p>
-                    <p>Let's get started building the application.
-                        First of all, we need to import React and component useState from react. Importing means reusing
-                        the methods, components
-                        declared earlier. To display on the screen we have to right things in return().</p>
-                    <p>
-                        As a display, we need to take input using input tag, and to represent the output we are creating
-                        the dictionary and function.
-                    </p>
-                    <p class="imp-point">
-                        <strong>Dictionary: </strong> It is a key and value pair represented by curly braces({}). Can be
-                        accessed using a for loop with a key to
-                        finding the value. Here we are storing our emoji and its value using the dictionary itself.
-                    </p>
-                    <div class="code">
-                        <strong>Example: </strong>
-                        <br>
-                        var emojiDictionary = {
-                        'emoji' : 'meaning of the emoji'
-                        };
-                    </div>
-                    <p class="imp-point">
-                        <strong>Object.keys(): </strong> It is a method that returns an array of the provided object's
-                        elements which are strings corresponding to
-                        the enumerable properties found directly upon the object. Ordering remains the same as inserted.
-                    </p>
-                    <p>
-                        We need to access our created dictionary of emojis with the help of Object.keys()method.
-                    </p>
-                    <div class="code">
-
-                        var emojiWeKnow = Object.keys(emojiDictionary);
-                        console.log(emojiWeKnow);
-                        <ul>console:
-                            <li>0: "😂"</li>
-                            <li>1: "😁"</li>
-                            <li>2: "😴"</li>
-                            <li>3: "😏"</li>
-                            <li>4: "😌"</li>
-                        </ul>
-                    </div>
-                    <p class="imp-point">
-                       <strong>Hook in react:</strong>  A hook is a special function that lets you "hook into" react features. useState
-                        is a hook that lets you
-                        add React state function components.
-                    </p>
-                    <p>Now we need to import the useState hook from React to use react capabilities or functions.</p>
-                    <div class="code">
-                        var [state, setState] = useState("");<br>
-                        where,
-                        <ul>
-                            <li>state is a variable,</li>
-                            <li>useState is used to increment/ update the value of variable state.</li>
-                        </ul>
-                    </div>
-                    <p>
-                        Here we need to create functions as clickHandler and emojiInputHandler.
-                    </p>
-                    <p>
-                        function clickHandler needs an emoji as a parameter. Here, we are finding the meaning of the
-                        emoji and passing it to
-                        setState.
-                    </p>
-                    <p>
-                        Function emojiInputHandler takes the event as a parameter and as per the event meaning is searched for the event(i.e,
-                        Event is here inserted emoji) and comparing if there is emoji is present in the dictionary if not it will result as
-                        "Undefined". If it is their then meaning is the output.
-                    </p>
-                    <p>
-                        We have created the constraint and now we need to access them properly.
-                        To take the event as input we need to add an event handler in the input tag.
-                        as,
-                    </p>
-                    <div class="code">
-                        onChange = {emojiInputHandler}
-                    </div>
-                    <p>
-                        Here We have created our Emoji cyclopedia. We can show our stored emoji's and as the user clicks on them it should show
-                        the meaning.
-                    </p>
-                    <p class="imp-point">
-                        <strong>map(): </strong> The map method creates a new array with the called object.
-                    </p>
-                    <p>
-                        As we know we have used the Object.keys method to create an array using a dictionary and this array is used with the map
-                        function here.
-                    </p>
-                    <div class="code">
-                        emojiWeKnow.map(function(emoji){<br>
-                        return(<br>
-                         onClick={()=>clickHandler(emoji)} <br>key={emoji}><br>{emoji}<br>
-                        );
-                        })
-                    </div>
-                    <p>
-                        Emoji Cyclopedia is completed!
-                    </p>
-                    <div class="imp-points code">
-                        <p>We learned about:</p>
-                        <ul>
-                            <li>Dictionary,</li>
-                            <li>Object.keys()</li>
-                            <li>Hooks in react,</li>
-                            <li>Event,</li>
-                            <li>OnChange,</li>
-                            <li>onClick,</li>
-                            <li>map() and Keys</li>
-                        </ul>
-                    </div>
-                </div>
-            </article>
-
-        </main>
-        <footer class="footer container">
-            <div class="footer-header">
-                You can connect with me on social media
+          <div>
+            <p>
+              Emoji Cyclopedia is an encyclopedia to take out the meaning of an
+              emoji. We have to insert emoji in the input column or we can click
+              on the emoji given from the database. We can add as much as
+              emoji's in our database using the dictionary used. It is made up
+              of using
+              <strong><a href="https://reactjs.org/">ReactJs</a></strong>
+            </p>
+            <p
+              >Let's get started building the application. First of all, we need
+              to import React and component useState from react. Importing means
+              reusing the methods, components declared earlier. To display on
+              the screen we have to right things in return().</p
+            >
+            <p>
+              As a display, we need to take input using input tag, and to
+              represent the output we are creating the dictionary and function.
+            </p>
+            <p class="imp-point">
+              <strong>Dictionary: </strong> It is a key and value pair
+              represented by curly braces({}). Can be accessed using a for loop
+              with a key to finding the value. Here we are storing our emoji and
+              its value using the dictionary itself.
+            </p>
+            <div class="code">
+              <strong>Example: </strong>
+              <br />
+              var emojiDictionary = { 'emoji' : 'meaning of the emoji' };
             </div>
-            <ul class="social-links list-non-bullet">
-                <li class="list-item-inline">
-                    <a class="link" href="https://github.com/Kothalkarpriya" target="_blank"> <strong>Github</strong>
-                    </a>
-                </li>
-                <li class="list-item-inline">
-                    <a class="link" href="https://linkedin.com/in/priyakothalkar" target="_blank"> <strong>Linkedin
-                        </strong></a>
-                </li>
-                <li class="list-item-inline">
-                    <a class="link" href="https://twitter.com/Priyakothalkar" target="_blank">
-                        <strong>Twitter</strong> </a>
-                </li>
-                <li class="list-item-inline">
-                    <a class="link" href="https://www.youtube.com/channel/UCFCcS_XornYgSVDiR0alThA"
-                        target="_blank"><strong>YouTube</strong></a>
-                </li>
-            </ul>
-        </footer>
+            <p class="imp-point">
+              <strong>Object.keys(): </strong> It is a method that returns an
+              array of the provided object's elements which are strings
+              corresponding to the enumerable properties found directly upon the
+              object. Ordering remains the same as inserted.
+            </p>
+            <p>
+              We need to access our created dictionary of emojis with the help
+              of Object.keys()method.
+            </p>
+            <div class="code">
+              var emojiWeKnow = Object.keys(emojiDictionary);
+              console.log(emojiWeKnow);
+              <ul
+                >console:
+                <li>0: "😂"</li>
+                <li>1: "😁"</li>
+                <li>2: "😴"</li>
+                <li>3: "😏"</li>
+                <li>4: "😌"</li>
+              </ul>
+            </div>
+            <p class="imp-point">
+              <strong>Hook in react:</strong> A hook is a special function that
+              lets you "hook into" react features. useState is a hook that lets
+              you add React state function components.
+            </p>
+            <p
+              >Now we need to import the useState hook from React to use react
+              capabilities or functions.</p
+            >
+            <div class="code">
+              var [state, setState] = useState("");<br />
+              where,
+              <ul>
+                <li>state is a variable,</li>
+                <li
+                  >useState is used to increment/ update the value of variable
+                  state.</li
+                >
+              </ul>
+            </div>
+            <p>
+              Here we need to create functions as clickHandler and
+              emojiInputHandler.
+            </p>
+            <p>
+              function clickHandler needs an emoji as a parameter. Here, we are
+              finding the meaning of the emoji and passing it to setState.
+            </p>
+            <p>
+              Function emojiInputHandler takes the event as a parameter and as
+              per the event meaning is searched for the event(i.e, Event is here
+              inserted emoji) and comparing if there is emoji is present in the
+              dictionary if not it will result as "Undefined". If it is their
+              then meaning is the output.
+            </p>
+            <p>
+              We have created the constraint and now we need to access them
+              properly. To take the event as input we need to add an event
+              handler in the input tag. as,
+            </p>
+            <div class="code"> onChange = {emojiInputHandler} </div>
+            <p>
+              Here We have created our Emoji cyclopedia. We can show our stored
+              emoji's and as the user clicks on them it should show the meaning.
+            </p>
+            <p class="imp-point">
+              <strong>map(): </strong> The map method creates a new array with
+              the called object.
+            </p>
+            <p>
+              As we know we have used the Object.keys method to create an array
+              using a dictionary and this array is used with the map function
+              here.
+            </p>
+            <div class="code">
+              emojiWeKnow.map(function(emoji){<br />
+              return(<br />
+              onClick={()=>clickHandler(emoji)}
+              <br />key={emoji}><br />{emoji}<br />
+              ); })
+            </div>
+            <p> Emoji Cyclopedia is completed! </p>
+            <div class="imp-points code">
+              <p>We learned about:</p>
+              <ul>
+                <li>Dictionary,</li>
+                <li>Object.keys()</li>
+                <li>Hooks in react,</li>
+                <li>Event,</li>
+                <li>OnChange,</li>
+                <li>onClick,</li>
+                <li>map() and Keys</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+      </main>
+      <footer class="footer container">
+        <p class="footer-header"
+          >Let's stay connected! Feel free to reach out to me on social media</p
+        >
+        <ul class="social-links list-non-bullet">
+          <li class="list-item-inline">
+            <a class="link" href="https://dev.to/kothalkarpriya" target="_blank">
+              <i class="fab fa-dev"></i>
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://github.com/Kothalkarpriya"
+              target="_blank"
+            >
+              <i class="fa fa-github"></i>
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://linkedin.com/in/priyakothalkar"
+              target="_blank"
+            >
+              <i class="fa fa-linkedin"></i>
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://twitter.com/Priyakothalkar"
+              target="_blank"
+              ><i class="fa fa-twitter"></i>
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://www.youtube.com/channel/UCFCcS_XornYgSVDiR0alThA"
+              target="_blank"
+            >
+              <i class="fa fa-youtube"></i>
+            </a>
+          </li>
+          <li class="list-item-inline">
+            <a
+              class="link"
+              href="https://www.instagram.com/priya.kothalkar/"
+              target="_blank"
+            >
+              <i class="fab fa-instagram-square"></i>
+            </a>
+          </li>
+        </ul>
+      </footer>
     </div>
-</body>
-
+  </body>
 </html>
